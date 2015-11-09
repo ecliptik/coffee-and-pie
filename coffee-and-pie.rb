@@ -25,6 +25,7 @@ WorkingHours::Config.holidays = [Date.new(2015, 11, 26),
                                  Date.new(2015, 12, 31),
                                  Date.new(2016, 1, 1)]
 
+#Gifs to choose from
 gifs = ["https://raw.githubusercontent.com/ecliptik/gifs/master/agent-cooper-coffee-01.gif",
         "https://raw.githubusercontent.com/ecliptik/gifs/master/agent-cooper-coffee-02.gif",
         "https://raw.githubusercontent.com/ecliptik/gifs/master/big-trouble-are-you-crazy.gif",
@@ -77,7 +78,7 @@ begin
       message = gifs.sample
 
       #Send message to hipchat
-      #send2hipchat(message, color)
+      send2hipchat(message, color)
     end
   end
 
