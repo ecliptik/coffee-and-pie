@@ -37,7 +37,7 @@ gifs = ["https://raw.githubusercontent.com/ecliptik/gifs/master/agent-cooper-cof
 
 # send2hipchat function to emit a message to channel
 # Accepts message and color string
-def send2hipchat(message, color = "yellow")
+def send2hipchat(message, color = "gray")
   @message = message
   @color = color
 
@@ -78,7 +78,7 @@ begin
       message = gifs.sample
 
       #Send message to hipchat
-      send2hipchat(message, color)
+      send2hipchat(message)
     end
   end
 
