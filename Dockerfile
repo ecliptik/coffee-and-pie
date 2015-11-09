@@ -8,5 +8,8 @@ COPY [ "/", "/app" ]
 #Install gems
 RUN [ "bundle", "install", "--standalone" ]
 
+#Set timezone to US/Pacific
+RUN [ "cp", "/usr/share/zoneinfo/US/Pacific", "/etc/localtime" ]
+
 #Run ruby script
 ENTRYPOINT [ "ruby", "/app/coffee-and-pie.rb" ]
